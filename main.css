@@ -41,6 +41,8 @@ main {
 footer {
     grid-area: footer;
     background-color: rgb(240, 240, 148);
+    display: flex;
+    justify-content: center;
 }
 
 nav{

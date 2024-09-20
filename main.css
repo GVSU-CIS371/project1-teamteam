@@ -1,25 +1,25 @@
 body,
 html {
-  height:100%;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-  margin: 0px;
-  padding: 0px;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
 }
 
-#app{
-/* change the layout of the app to be grid */
-  display:grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-/* make height of the grid take the entire viewport height */
-  /* height: 100vh;
+#app {
+    /* change the layout of the app to be grid */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    /* make height of the grid take the entire viewport height */
+    /* height: 100vh;
   width: 100vw; */
-  display: inline;
+    display: inline;
 }
 
 header {
@@ -45,25 +45,25 @@ footer {
     justify-content: center;
 }
 
-nav{
+nav {
     /* we want the nav with the links to be on the top side of the header flexbox */
     align-self: flex-start;
 }
 
-h1{
+h1 {
     /* we want the h1 header to be aligned on the top side of the header flexbox */
     align-self: flex-endstart;
 }
 
-img{
+img {
     width: 100px;
 }
 
 
 /* lets make the layout of the store item */
 /* want main to be a grid layout */
-main{
-    display: grid; 
+main {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     /* add a gap vertically and horizontally between all the individual grid elements */
     gap: 1em;
@@ -72,11 +72,14 @@ main{
 }
 
 /* now to apply css to store items */
-main > div.store-item{
+main>div.store-item {
     border: 1px solid black;
 }
 
-
+/* giving the last row equal spacing */
+.store-item span {
+    padding: 7px;
+}
 
 
 /* ALEC M TRIED DOING A FLEXBOX (SEE BELOW), BUT THE LAST ROW WOULD ALWAYS EXPAND TO FILL THE AVAILABLE SPACE WHICH I DON'T THINK IS WHAT PROFESSOR WANTS
@@ -84,8 +87,8 @@ SO I SWAPPED TO A GRID (AS SEEN ABOVE). */
 
 /* lets assign main to be a flex-box since we want it to wrap around which flex-boxes do nicely. */
 /* main{ */
-    /* main is now a flexbox that will wrap and have individual items spaced evenly*/
-    /* display: flex;
+/* main is now a flexbox that will wrap and have individual items spaced evenly*/
+/* display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-content: space-around;

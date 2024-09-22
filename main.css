@@ -52,7 +52,7 @@ nav {
 
 h1 {
     /* we want the h1 header to be aligned on the top side of the header flexbox */
-    align-self: flex-endstart;
+    align-self: flex-start;
 }
 
 img {
@@ -77,9 +77,44 @@ main>div.store-item {
 }
 
 /* giving the last row equal spacing */
-.store-item span {
-    padding: 7px;
+.store-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "img img img"
+        "title title title"
+        "desc desc desc"
+        "rating price stock";
 }
+
+.store-item img {
+    grid-area: img;
+}
+
+.store-item p:first-of-type {
+    grid-area: title;
+}
+
+.store-item p:nth-of-type(2) {
+    grid-area: desc;
+}
+
+.store-item span:nth-of-type(1) {
+    grid-area: rating;
+    text-align: left;
+}
+
+.store-item span:nth-of-type(2) {
+    grid-area: price;
+    text-align: center;
+}
+
+.store-item span:nth-of-type(3) {
+    grid-area: stock;
+    text-align: right;
+}
+
 
 
 /* ALEC M TRIED DOING A FLEXBOX (SEE BELOW), BUT THE LAST ROW WOULD ALWAYS EXPAND TO FILL THE AVAILABLE SPACE WHICH I DON'T THINK IS WHAT PROFESSOR WANTS

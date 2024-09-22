@@ -76,7 +76,8 @@ main>div.store-item {
     border: 1px solid black;
 }
 
-/* giving the last row equal spacing */
+/* creating a grid box in each store item
+   which allows spacing for the rating, price, and stock. */
 .store-item {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -114,23 +115,3 @@ main>div.store-item {
     grid-area: stock;
     text-align: right;
 }
-
-
-
-/* ALEC M TRIED DOING A FLEXBOX (SEE BELOW), BUT THE LAST ROW WOULD ALWAYS EXPAND TO FILL THE AVAILABLE SPACE WHICH I DON'T THINK IS WHAT PROFESSOR WANTS
-SO I SWAPPED TO A GRID (AS SEEN ABOVE). */
-
-/* lets assign main to be a flex-box since we want it to wrap around which flex-boxes do nicely. */
-/* main{ */
-/* main is now a flexbox that will wrap and have individual items spaced evenly*/
-/* display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-content: space-around;
-}
-
-
-main > div.store-item{
-    border: 1px solid black;
-    flex: 0 0 20%
-} */

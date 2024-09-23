@@ -55,9 +55,6 @@ h1 {
     align-self: flex-start;
 }
 
-img {
-    width: 100px;
-}
 
 
 /* lets make the layout of the store item */
@@ -81,7 +78,7 @@ main>div.store-item {
 .store-item {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr;
     grid-template-areas:
         "img img img"
         "title title title"
@@ -91,6 +88,7 @@ main>div.store-item {
 
 .store-item img {
     grid-area: img;
+    width: 100%;
 }
 
 .store-item p:first-of-type {
